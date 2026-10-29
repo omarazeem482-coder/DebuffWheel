@@ -1,0 +1,20 @@
+name: DebuffWheel
+version: '${version}'
+main: dev.debuffwheel.DebuffWheelPlugin
+api-version: '1.21'
+description: Spin a wheel and get a random debuff for the length of a recording session.
+commands:
+  debuffwheel:
+    description: Spin the debuff wheel and manage debuffs
+    aliases: [debuff, dw]
+    usage: /<command> <spin|status|list|clear|reload>
+permissions:
+  debuffwheel.use:
+    description: Spin the wheel for yourself and check status
+    default: true
+  debuffwheel.admin:
+    description: Spin for others, clear debuffs, reload config
+    default: op
+  debuffwheel.bypass:
+    description: Ignore the once-per-day limit
+    default: op

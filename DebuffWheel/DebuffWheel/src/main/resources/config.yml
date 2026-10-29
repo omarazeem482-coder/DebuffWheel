@@ -1,0 +1,32 @@
+# How long a debuff lasts, in minutes. 90 = 1h 30m (one recording session).
+duration-minutes: 90
+
+# Each player may spin once per day (server local time). Admins with
+# debuffwheel.bypass can always spin.
+once-per-day: true
+
+# Announce the result to the whole server.
+broadcast: true
+
+# Wheel animation: number of "ticks" of the wheel before it lands.
+# Higher = longer spin (about 0.25s per frame at the end, slowing down).
+spin-frames: 24
+
+# Automatically spin for everyone online at a set time each day (24h, HH:mm).
+auto-daily-spin:
+  enabled: false
+  time: "18:00"
+
+# The wheel. Add/remove freely.
+# type  = vanilla effect id (https://minecraft.wiki/w/Effect)
+# level = 1 means level I, 2 means level II, ...
+# name  = shown on the wheel (optional)
+effects:
+  - { type: slowness,       level: 1, name: "Slowness I" }
+  - { type: mining_fatigue, level: 1, name: "Mining Fatigue I" }
+  - { type: weakness,       level: 1, name: "Weakness I" }
+  - { type: hunger,         level: 1, name: "Hunger I" }
+  - { type: nausea,         level: 1, name: "Nausea" }
+  - { type: darkness,       level: 1, name: "Darkness" }
+  - { type: unluck,         level: 1, name: "Bad Luck" }
+  - { type: slowness,       level: 2, name: "Slowness II" }
